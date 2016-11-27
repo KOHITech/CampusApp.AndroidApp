@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/main_menu"
+    android:layout_height="match_parent">
+    <item
+        android:id="@+id/Home"
+        android:orderInCategory="100"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+    /item>
+
+    <item
+        android:id="@+id/Agenda"
+        android:orderInCategory="100"
+        android:title="Agenda"
+        app:showAsAction="never" />
+    /item>
+
+    <item
+        android:id="@+id/Projet"
+        android:orderInCategory="100"
+        android:title="Projet"
+        app:showAsAction="never" />
+    /item>
+
+    <item
+        android:id="@+id/Association"
+        android:orderInCategory="100"
+        android:title="Association"
+        app:showAsAction="never" />
+    /item>
+
+    <item
+        android:id="@+id/Campus"
+        android:orderInCategory="100"
+        android:title="Campus"
+        app:showAsAction="never" />
+    /item>
+
+    <item
+        android:id="@+id/Settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never" />
+    /item>
+
+
+</menu>
