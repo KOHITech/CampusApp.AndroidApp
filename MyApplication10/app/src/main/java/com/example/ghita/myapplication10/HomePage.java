@@ -1,21 +1,48 @@
 package com.example.ghita.myapplication10;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class HomePage extends AppCompatActivity {
 
     private Toolbar toolbar;
+    Button profile;
+    Button schedule;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.containers);
         toolbar = (Toolbar)findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
+        profile = (Button)findViewById(R.id.profil);
+        schedule = (Button)findViewById(R.id.schedul);
+        profile.setOnClickListener(new android.view.View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                Profile f = new Profile();
+                fm.beginTransaction().add(R.id.fragment_container,f).commit();
+            }
+        });
+        schedule.setOnClickListener(new android.view.View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                Schedule f = new Schedule();
+                fm.beginTransaction().add(R.id.fragment_container,f).commit();
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
