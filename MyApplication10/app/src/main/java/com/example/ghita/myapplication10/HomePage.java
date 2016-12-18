@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,33 +17,35 @@ public class HomePage extends AppCompatActivity {
     private Toolbar toolbar;
     Button profile;
     Button schedule;
+    View profile_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.containers);
+        setContentView(R.layout.profile_view);
         toolbar = (Toolbar)findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         profile = (Button)findViewById(R.id.profil);
-        schedule = (Button)findViewById(R.id.schedul);
         profile.setOnClickListener(new android.view.View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
                 Profile f = new Profile();
-                fm.beginTransaction().add(R.id.fragment_container,f).commit();
+                //fm.beginTransaction().add(R.id.fragment_container,f).commit();
             }
         });
-        schedule.setOnClickListener(new android.view.View.OnClickListener() {
+        //setContentView(R.layout.schedule_view);
+        //schedule = (Button)findViewById(R.id.schedul);
+        //schedule.setOnClickListener(new android.view.View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                FragmentManager fm = getSupportFragmentManager();
-                Schedule f = new Schedule();
-                fm.beginTransaction().add(R.id.fragment_container,f).commit();
-            }
-        });
+          //  @Override
+            //public void onClick(View v) {
+              //  FragmentManager fm = getSupportFragmentManager();
+                //Schedule f = new Schedule();
+                //fm.beginTransaction().add(R.id.fragment_container,f).commit();
+            //}
+        //});
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

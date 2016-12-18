@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void SignUp_click(View view){
-        Intent intent = new Intent(MainActivity.this,HomePage.class);
+        Intent intent = new Intent(MainActivity.this,HomePage2.class);
         startActivity(intent);
     }
 }
