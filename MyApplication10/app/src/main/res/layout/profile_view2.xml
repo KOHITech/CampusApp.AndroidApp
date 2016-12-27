@@ -15,7 +15,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="158dp"
-                app:srcCompat="@mipmap/profile_face"
+                app:srcCompat="@mipmap/personal_photo"
                 android:layout_gravity="start"
                 android:layout_marginTop="20dp"
                 android:width="250dp"
@@ -73,6 +73,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
+            android:gravity="top|left"
             android:id="@+id/textView6" />
 
         <TextView
@@ -87,16 +88,40 @@
             android:layout_marginLeft="20dp"
             android:id="@+id/textView7" />
 
-        <TextView
-            android:text="Mail adress :"
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:textStyle="bold"
             android:layout_below="@+id/textView7"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/textView8" />
+            android:layout_marginTop="2dp"
+            android:id="@+id/mail">
+
+            <TextView
+                android:text="Mail adress :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/textView7"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/textView8" />
+
+            <TextView
+                android:text="omar.elballouti@centrale-casablanca.ma"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"/>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mail"
+            android:layout_marginTop="2dp"
+            android:id="@+id/tel">
 
         <TextView
             android:text="Telephone number :"
@@ -104,21 +129,48 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:layout_below="@+id/textView8"
+            android:layout_below="@+id/mail"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:id="@+id/textView9" />
+
+         <TextView
+             android:text="+212654389127"
+             android:gravity="center"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"/>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tel"
+            android:layout_marginTop="2dp"
+            android:id="@+id/university">
 
         <TextView
             android:text="university level :"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView9"
+            android:layout_below="@+id/tel"
             android:textSize="15sp"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:id="@+id/textView10" />
+
+         <TextView
+            android:text="undergraduate -- 2nd year"
+             android:gravity="center"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"/>
+
+        </android.support.v7.widget.LinearLayoutCompat>
 
         <TextView
             android:text="Activities :"
@@ -126,7 +178,7 @@
             android:layout_height="wrap_content"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:layout_below="@+id/textView10"
+            android:layout_below="@+id/university"
             android:textColor="@android:color/holo_green_dark"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
@@ -143,16 +195,84 @@
             android:layout_marginLeft="20dp"
             android:id="@+id/textView12" />
 
+        <include
+            android:id="@+id/association_tab1"
+            layout="@layout/association_tab"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/textView12"/>
+
         <TextView
-            android:text="Member at 2 :"
+            android:text="Works on :"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:layout_below="@+id/textView12"
+            android:layout_below="@+id/association_tab1"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
-            android:id="@+id/textView13" />
+            android:id="@+id/textView13"/>
+
+        <include
+            android:id="@+id/project_group_tab1"
+            layout="@layout/project_group_tab"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/textView13"/>
+
+        <include
+            android:id="@+id/scientific_project_group_tab1"
+            layout="@layout/scientific_project_group_tab"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/project_group_tab1"/>
+
+
+        <TextView
+            android:text="Interested in these events :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/scientific_project_group_tab1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/textView14"/>
+
+        <include
+            android:id="@+id/karaoke_tab"
+            layout="@layout/event1_tab"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/textView14"/>
+
+        <include
+            android:id="@+id/theatre_tab"
+            layout="@layout/event2_tab"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/karaoke_tab"/>
+
+        <include
+            android:id="@+id/party_tab"
+            layout="@layout/event4_tab"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/theatre_tab"/>
+
+        <include
+            android:id="@+id/conference_tab"
+            layout="@layout/event3_tab"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/party_tab"/>
 
     </RelativeLayout>
 

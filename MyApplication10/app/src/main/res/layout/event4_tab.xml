@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:srcCompat="@mipmap/party_logo"
+        android:id="@+id/imageView5"
+        android:gravity="center"
+        android:layout_weight="0.1"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:text="Soirée gala de la première promo "
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:textColor="#DC143C"
+        android:layout_weight="0.9"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:id="@+id/party_text" />
+
+</LinearLayout>
