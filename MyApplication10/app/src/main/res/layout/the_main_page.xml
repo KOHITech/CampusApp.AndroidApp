@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <include
@@ -8,4 +10,419 @@
         layout="@layout/tool_bar"
         ></include>
 
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Fonctionnalités de planification"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:layout_weight="1" />
+
+    <HorizontalScrollView
+        android:layout_below="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/scroll1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/myprofilel">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/myprofile"
+                    android:id="@+id/myprofile"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="My Profile"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/myprofilel"
+                android:orientation="vertical"
+                android:id="@+id/myschedulel">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/schedule"
+                    android:id="@+id/myschedule"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Plan my week"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/myschedulel"
+                android:orientation="vertical"
+                android:id="@+id/meetingl">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/meeting"
+                    android:id="@+id/meeting"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Plan a meeting"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/meetingl"
+                android:orientation="vertical"
+                android:id="@+id/todo_listl">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/todo_list"
+                    android:id="@+id/todo_list"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Tasks to do"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/todo_listl"
+                android:orientation="vertical"
+                android:id="@+id/todo_teaml">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/team"
+                    android:id="@+id/team"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Team Up"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_below="@+id/scroll1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18dp"
+        android:text="Les tops événements actuels"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView16"
+        android:layout_weight="1" />
+
+    <HorizontalScrollView
+        android:layout_below="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/scroll2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/foruml">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/forum_ecc"
+                    android:id="@+id/forum_ecc"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/forum_ecc"
+                    android:gravity="center"
+                    android:text="Forum ECC !"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/foruml"
+                android:orientation="vertical"
+                android:id="@+id/jeccl">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/jecc_logo"
+                    android:id="@+id/jecc"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="La JE Recrute"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/jeccl"
+                android:orientation="vertical"
+                android:id="@+id/galal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/gala"
+                    android:id="@+id/gala"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Gala is here"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/galal"
+                android:orientation="vertical"
+                android:id="@+id/bloodl">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/blood"
+                    android:id="@+id/blood"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Step up"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/bloodl"
+                android:orientation="vertical"
+                android:id="@+id/bdel">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/bde"
+                    android:id="@+id/bde"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Team Up"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_below="@+id/scroll2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18dp"
+        android:text="Ongoing Projects"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView17"
+        android:layout_weight="1" />
+
+    <HorizontalScrollView
+        android:layout_below="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/scroll3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/projectl">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/project"
+                    android:id="@+id/project"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/forum_ecc"
+                    android:gravity="center"
+                    android:text="Innovation"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/projectl"
+                android:orientation="vertical"
+                android:id="@+id/recherchel">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/scientific_logo"
+                    android:id="@+id/recherche"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Recherche"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/recherchel"
+                android:orientation="vertical"
+                android:id="@+id/sysdynl">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/math"
+                    android:id="@+id/sysdyn"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Dynamic systems"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/sysdynl"
+                android:orientation="vertical"
+                android:id="@+id/mngtl">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/mngt"
+                    android:id="@+id/mngt"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_below="@+id/myprofile"
+                    android:gravity="center"
+                    android:text="Project Mngt"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

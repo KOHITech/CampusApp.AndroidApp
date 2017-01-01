@@ -61,6 +61,7 @@
                     android:layout_weight="0.2"
                     android:layout_marginRight="20dp"
                     android:background="@drawable/shadow_box"
+                    android:onClick="edit"
                     android:id="@+id/button2" />
 
             </android.support.v7.widget.LinearLayoutCompat>

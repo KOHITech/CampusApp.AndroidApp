@@ -3,6 +3,7 @@ package com.example.ghita.myapplication10;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.Fragment;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -67,6 +68,12 @@ public class HomePage2 extends AppCompatActivity {
 
 
     }
+
+    protected void edit(View view){
+        Intent intent = new Intent(HomePage2.this,TheMainPage.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
