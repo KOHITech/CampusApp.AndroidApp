@@ -16,7 +16,7 @@
     <ImageView
         android:layout_width="180dp"
         android:layout_height="120dp"
-        app:srcCompat="@mipmap/student_logo"
+        app:srcCompat="@mipmap/logo"
         android:layout_marginTop="20dp"
         android:id="@+id/imageView"
         android:layout_below="@+id/textView"
@@ -81,7 +81,7 @@
     <Button
         android:text="Sign In"
         android:layout_width="160dp"
-        android:background="@android:color/holo_green_dark"
+        android:background="#00968D"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText2"
         android:layout_marginTop="37dp"
@@ -96,7 +96,7 @@
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="#00968D"
         android:textStyle="bold"
         android:id="@+id/textView"
         android:layout_below="@id/tool_bar"

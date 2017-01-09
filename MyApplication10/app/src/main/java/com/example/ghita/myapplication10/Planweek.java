@@ -6,19 +6,20 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.view.View;
 
-public class TheMainPage extends AppCompatActivity {
+import static android.support.v7.appcompat.R.styleable.View;
+
+public class Planweek extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.the_main_page);
+        setContentView(R.layout.plan_week);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(myToolbar);
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -39,8 +40,5 @@ public class TheMainPage extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public void planmyweek(View v){
-        Intent intent = new Intent(TheMainPage.this,Planweek.class);
-        startActivity(intent);
-    }
+
 }
