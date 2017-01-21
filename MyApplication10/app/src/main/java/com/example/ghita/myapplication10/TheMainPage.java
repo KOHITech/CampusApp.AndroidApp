@@ -43,4 +43,9 @@ public class TheMainPage extends AppCompatActivity {
         Intent intent = new Intent(TheMainPage.this,Planweek.class);
         startActivity(intent);
     }
+
+    public void myprofile(View v){
+        Intent intent = new Intent(TheMainPage.this,HomePage2.class);
+        startActivity(intent);
+    }
 }

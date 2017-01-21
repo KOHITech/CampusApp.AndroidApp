@@ -1,17 +1,23 @@
 package com.example.ghita.myapplication10;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CalendarView;
 import android.widget.LinearLayout;
 import android.view.View;
+import android.widget.Toast;
 
 import static android.support.v7.appcompat.R.styleable.View;
 
 public class Planweek extends AppCompatActivity {
+
+    CalendarView calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +25,16 @@ public class Planweek extends AppCompatActivity {
         setContentView(R.layout.plan_week);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(myToolbar);
+        calendar =(CalendarView) findViewById(R.id.calendarView);
+        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month,
+                                            int dayOfMonth) {
+                Context context = getApplicationContext();
+                Toast.makeText(context,"Le "+String.valueOf(dayOfMonth)+String.valueOf(DateConverter.getMonth(month))+ " " + String.valueOf(year),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
