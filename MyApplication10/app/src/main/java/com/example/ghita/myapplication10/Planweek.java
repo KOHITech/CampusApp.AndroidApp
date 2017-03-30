@@ -6,11 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CalendarView;
 import android.widget.LinearLayout;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import static android.support.v7.appcompat.R.styleable.View;
@@ -32,10 +34,18 @@ public class Planweek extends AppCompatActivity {
             public void onSelectedDayChange(CalendarView view, int year, int month,
                                             int dayOfMonth) {
                 Context context = getApplicationContext();
-                Toast.makeText(context,"Le "+String.valueOf(dayOfMonth)+String.valueOf(DateConverter.getMonth(month))+ " " + String.valueOf(year),Toast.LENGTH_SHORT).show();
+                String event ;
+                //event = Event.getEvent(year, month, dayOfMonth);
+                Toast.makeText(context,"Le "+String.valueOf(dayOfMonth)+ " " + String.valueOf(DateConverter.getMonth(month))+ " " + String.valueOf(year),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context,event,Toast.LENGTH_SHORT).show();
             }
         });
     }
+
+    public void add_event(View v){
+        startActivity(new Intent(Planweek.this, AddEventWindow.class));
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

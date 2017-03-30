@@ -37,4 +37,14 @@ public class Event {
         id = c.getInt(0);
         return id;
     }
+
+    static public String getEvent(int annee, int mois, int jour){
+        c = db.rawQuery("SELECT * From events WHERE year = '" + String.valueOf(annee) + "' AND month = '" + String.valueOf(mois) + "' AND day = '" + String.valueOf(jour) + "'",null);
+        if (c == null){
+            return "Aucun événement n'est prévue pour cette date";
+        }else{
+            c.moveToFirst();
+            return c.getString(1);
+        }
+    }
 }
